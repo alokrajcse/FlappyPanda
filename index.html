@@ -3,50 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cute Flappy Panda Game</title>
+  <title>Flappy Panda Game</title>
   <style>
     body {
       margin: 0;
       overflow: hidden;
-      background-color: #fde7e7; /* Light pink background */
-      font-family: 'Arial', sans-serif; /* Cute font */
+      background-color: #fde7e7; 
+      font-family: 'Arial', sans-serif;
       position: relative;
     }
 
     canvas {
       display: block;
-      border: 1px solid #ff7d7d; /* Border color for the game canvas */
+      border: 1px solid #ff7d7d;
       margin: 20px auto;
-    /*  background-color: #fff; /* White background for the canvas */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Cute shadow effect */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
       position: relative;
-    }
-
-    #hearts {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none; /* Ensure clicks go through the hearts to the canvas */
-      z-index: -1;
-    }
-
-    #hearts:before {
-      content: '❤️'; /* Heart emoji */
-      font-size: 80px;
-      position: absolute;
-      color: #ff7d7d; /* Heart color */
-      animation: heartAnimation 5s linear infinite;
-    }
-
-    @keyframes heartAnimation {
-      0%, 100% {
-        transform: translateY(0) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-20px) rotate(45deg);
-      }
     }
 
     #introMessage {
@@ -62,7 +34,7 @@
 
     #introMessage button {
       padding: 10px;
-      background-color: #ff7d7d; /* Pink button color */
+      background-color: #ff7d7d;
       color: white;
       border: none;
       border-radius: 5px;
@@ -83,22 +55,22 @@
       width: 100%;
       height: 100%;
       overflow: auto;
-      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for the modal */
+      background-color: rgba(255, 255, 255, 0.8);
     }
 
     .modal-content {
-      background-color: #fde7e7; /* Light pink background for modal content */
+      background-color: #fde7e7; 
       margin: 15% auto;
       padding: 20px;
-      border: 1px solid #ff7d7d; /* Border color for modal content */
+      border: 1px solid #ff7d7d; 
       width: 80%;
       text-align: center;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Cute shadow effect */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     }
 
     #replayBtn {
       padding: 10px;
-      background-color: #ff7d7d; /* Pink button color */
+      background-color: #ff7d7d; 
       color: white;
       border: none;
       border-radius: 5px;
@@ -111,7 +83,7 @@
       top: 10px;
       right: 10px;
       padding: 10px;
-      background-color: #ff7d7d; /* Pink button color */
+      background-color: #ff7d7d; 
       color: white;
       border: none;
       border-radius: 5px;
@@ -122,12 +94,11 @@
 </head>
 <body>
   <div id="introMessage">
-    <p>Play the Cute Anjali Panda Game! 🐼</p>
+    <p>Play the Flappy Panda Game! 🐼</p>
     <button onclick="startGame()">Start Game</button>
   </div>
 
   <canvas id="gameCanvas"></canvas>
-  <div id="hearts"></div> <!-- Add hearts as a background -->
   <div id="myModal">
     <div class="modal-content">
       <p id="scoreText"></p>
@@ -156,7 +127,7 @@
       updateCanvasSize();
 
       birdImg = new Image();
-      birdImg.src = 'bird.png';
+      birdImg.src = 'panda.png';
       birdX = 50;
       birdY = canvas.height / 2 - 15;
       birdSpeedY = 0;
@@ -301,3 +272,4 @@
   </script>
 </body>
 </html>
+
